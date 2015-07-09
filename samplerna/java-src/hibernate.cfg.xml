@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory name="OnlineSessionFact">
+ <!-- <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property> 
+  <property name="hibernate.connection.password">mckessonsmora</property> 
+  <property name="hibernate.connection.url">jdbc:oracle:thin:@10.230.172.19:1536:P001</property> 
+  <property name="hibernate.connection.username">RP00</property> 
+  <property name="hibernate.dialect">org.hibernate.dialect.Oracle9Dialect</property> 
+  <property name="hibernate.cache.enable_cache">true</property>
+  <property name="hibernate.cache.use_query_cache">true</property>
+  <property name="hibernate.statement_cache.size">25</property>
+  <property name="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</property>
+-->
+  <property name="hibernate.connection.datasource">java:jboss/datasources/SMORADataSource</property> 
+  
+  <property name="hibernate.dialect">org.hibernate.dialect.Oracle9Dialect</property> 
+  <property name="hibernate.cache.enable_cache">true</property>
+  <property name="hibernate.cache.use_query_cache">true</property>
+  <property name="hibernate.statement_cache.size">25</property>
+  <property name="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</property>
+  <!-- <property name="hibernate.jndi.weblogic.jndi.replicateBindings">false</property> -->
+
+        <property name="show_sql">false</property>
+        <mapping resource="com/mckesson/smora/database/model/TApplAcctGrp.hbm.xml"/>
+        <mapping resource="com/mckesson/smora/database/model/TApplAcctGrpDtl.hbm.xml"/>
+        <mapping resource="com/mckesson/smora/database/model/TApplItmEntyTyp.hbm.xml"/>
+        <mapping resource="com/mckesson/smora/database/model/TApplItmGrpDtl.hbm.xml"/>
+        <mapping resource="com/mckesson/smora/database/model/TApplItmGrp.hbm.xml"/>
+        <mapping resource="com/mckesson/smora/database/model/TIwSplrAcct.hbm.xml"/>
+        <mapping resource="com/mckesson/smora/database/model/TItem.hbm.xml"/>
+        <mapping resource="com/mckesson/smora/database/model/TItemAtrb.hbm.xml"/>
+        <mapping resource="com/mckesson/smora/database/model/TNdc.hbm.xml"/>  
+        <mapping resource="com/mckesson/smora/database/model/TAhfsTheraCls.hbm.xml"/> 
+        <mapping resource="com/mckesson/smora/database/model/TIwMicaDept.hbm.xml"/>   
+        <mapping resource="com/mckesson/smora/database/model/TCustAcct.hbm.xml"/>
+        <mapping resource="com/mckesson/smora/database/model/TApplIwUserAccess.hbm.xml"/>
+        <mapping resource="com/mckesson/smora/database/model/TApplRptTmplt.hbm.xml"/>
+        <mapping resource="com/mckesson/smora/database/model/TApplErrorLog.hbm.xml"/> 
+        <mapping resource="com/mckesson/smora/database/model/TApplStat.hbm.xml"/>
+        <mapping resource="com/mckesson/smora/database/model/TApplRptTypCmbn.hbm.xml"/> 
+        <mapping resource="com/mckesson/smora/database/model/TApplRptTyp.hbm.xml"/>    
+        <mapping resource="com/mckesson/smora/database/model/TCrmem.hbm.xml"/>  
+        <mapping resource="com/mckesson/smora/database/model/TAssetMgmtPref.hbm.xml"/> 
+        <mapping resource="com/mckesson/smora/database/model/TIdbAcctPrfl.hbm.xml"/>  
+        <mapping resource="com/mckesson/smora/database/model/TMthSaleEqv.hbm.xml"/>          
+        <mapping resource="com/mckesson/smora/database/model/TCustMckPurchRollngHist1.hbm.xml"/> 
+        <mapping resource="com/mckesson/smora/database/model/TCustNonmckItem.hbm.xml"/> 
+        <mapping resource="com/mckesson/smora/database/model/TCrmemItem.hbm.xml"/>       
+        <mapping resource="com/mckesson/smora/database/model/TIdbDocHdr.hbm.xml"/>
+        <mapping resource="com/mckesson/smora/database/model/TIwCust.hbm.xml"/>
+        <mapping resource="com/mckesson/smora/database/model/TApplFldMetaData.hbm.xml"/>        
+        <mapping resource="com/mckesson/smora/database/model/TApplFldTblLkup.hbm.xml"/>        
+        <mapping resource="com/mckesson/smora/database/model/TApplFrmlaFldTblLkup.hbm.xml"/>        
+        <mapping resource="com/mckesson/smora/database/model/TApplFuncAreaLkup.hbm.xml"/>
+        <mapping resource="com/mckesson/smora/database/model/TDrugItemPrc.hbm.xml"/>  
+        <mapping resource="com/mckesson/smora/database/model/TCustItemAtrb.hbm.xml"/> 
+        <mapping resource="com/mckesson/smora/database/model/TVaCustCntrc.hbm.xml"/>   
+        <mapping resource="com/mckesson/smora/database/model/TVaCustRptAutoSubActv.hbm.xml"/>    
+        <mapping resource="com/mckesson/smora/database/model/TAssetMgmtItem1.hbm.xml"/>   
+        <mapping resource="com/mckesson/smora/database/model/TCustNonmckPurchHist.hbm.xml"/>  
+        <mapping resource="com/mckesson/smora/database/model/TOsdDept.hbm.xml"/>    
+<!--    <mapping resource="com/mckesson/smora/database/model/TOrdr.hbm.xml"/>   -->
+        <mapping resource="com/mckesson/smora/database/model/TAck.hbm.xml"/>    
+<!--    <mapping resource="com/mckesson/smora/database/model/TOrdrLin1.hbm.xml"/>    -->
+        <mapping resource="com/mckesson/smora/database/model/TAckLin.hbm.xml"/>   
+        <mapping resource="com/mckesson/smora/database/model/TIwCntrcLead.hbm.xml"/> 
+        <mapping resource="com/mckesson/smora/database/model/TDrugItemPrcA1.hbm.xml"/> 
+        <mapping resource="com/mckesson/smora/database/model/TIwCustBusTyp.hbm.xml"/>  
+        <mapping resource="com/mckesson/smora/database/model/TIwCustCls.hbm.xml"/>
+        <mapping resource="com/mckesson/smora/database/model/TLocalDeptLkup.hbm.xml"/>  
+        <mapping resource="com/mckesson/smora/database/model/TIwEmItem.hbm.xml"/>          
+        <mapping resource="com/mckesson/smora/database/model/TPhysInvtyDtl.hbm.xml"/>                  
+        <mapping resource="com/mckesson/smora/database/model/TSaleItem.hbm.xml"/>                          
+        <mapping resource="com/mckesson/smora/database/model/TPhysInvtyHdr.hbm.xml"/>                          
+        <mapping resource="com/mckesson/smora/database/model/TApplSubFuncAreaLkup.hbm.xml"/>  
+        <mapping resource="com/mckesson/smora/database/model/TApplTblFld.hbm.xml"/>           
+        <mapping resource="com/mckesson/smora/database/model/TApplTblMetaData.hbm.xml"/>                   
+        <mapping resource="com/mckesson/smora/database/model/TApplTblJoinMtrx.hbm.xml"/>                           
+        <mapping resource="com/mckesson/smora/database/model/TApplTblJoinKeys.hbm.xml"/> 
+        <mapping resource="com/mckesson/smora/database/model/TIwRxdaCls.hbm.xml"/>  
+        <mapping resource="com/mckesson/smora/database/model/VCustItemAddDel.hbm.xml"/> 
+        <mapping resource="com/mckesson/smora/database/model/VCtlgItemSrch.hbm.xml"/>         
+        <mapping resource="com/mckesson/smora/database/model/TMckMthPurchHist.hbm.xml"/>             
+        <mapping resource="com/mckesson/smora/database/model/TApplTempCmsRlzdSav.hbm.xml"/> 
+        <mapping resource="com/mckesson/smora/database/model/TApplDrvrTblMtrx.hbm.xml"/>         
+        <mapping resource="com/mckesson/smora/database/model/TCmsRlzdSav.hbm.xml"/>    
+        <mapping resource="com/mckesson/smora/database/model/TEpDeptCtgy.hbm.xml"/>   
+        <mapping resource="com/mckesson/smora/database/model/TApplDrugSchdLkup.hbm.xml"/>           
+        <mapping resource="com/mckesson/smora/database/model/TApplRptStat.hbm.xml"/>  
+        <mapping resource="com/mckesson/smora/database/model/TApplCrtraAnlysWt.hbm.xml"/>
+	    <mapping resource="com/mckesson/smora/database/model/TApplCrtraAnlysTblWt.hbm.xml"/>
+        <mapping resource="com/mckesson/smora/database/model/TApplCrtraAnlysThold.hbm.xml"/>
+        <mapping resource="com/mckesson/smora/database/model/TDoseFormDscr.hbm.xml"/>        
+        <mapping resource="com/mckesson/smora/database/model/TUserFunc.hbm.xml"/>                
+        <mapping resource="com/mckesson/smora/database/model/TPrvgFunc.hbm.xml"/>                        
+        <mapping resource="com/mckesson/smora/database/model/TApplFldFuncLkup.hbm.xml"/>                           
+        <mapping resource="com/mckesson/smora/database/model/TApplQThold.hbm.xml"/>                                                
+        <mapping resource="com/mckesson/smora/database/model/TApplRptThold.hbm.xml"/> 
+        <mapping resource="com/mckesson/smora/database/model/TApplRptSql.hbm.xml"/> 
+        <mapping resource="com/mckesson/smora/database/model/TNatlSubGrp.hbm.xml"/> 
+		<mapping resource="com/mckesson/smora/database/model/TApplRptNam.hbm.xml"/> 
+        <mapping resource="com/mckesson/smora/database/model/TCustRgn.hbm.xml"/>         
+        <mapping resource="com/mckesson/smora/database/model/TCustDstrct.hbm.xml"/>                 
+        <mapping resource="com/mckesson/smora/database/model/TChnRgn.hbm.xml"/>                         
+        <mapping resource="com/mckesson/smora/database/model/TChnRgnDstrct.hbm.xml"/>                                 
+        <mapping resource="com/mckesson/smora/database/model/TDcTerr.hbm.xml"/>                                         
+        <mapping resource="com/mckesson/smora/database/model/TNatlGrp.hbm.xml"/>                                                 
+        <mapping resource="com/mckesson/smora/database/model/TChnNam.hbm.xml"/>                                                         
+        <mapping resource="com/mckesson/smora/database/model/TApplRptUser.hbm.xml"/>                
+        <mapping resource="com/mckesson/smora/database/model/TApplCannedRptThold.hbm.xml"/>
+        <mapping resource="com/mckesson/smora/database/model/TApplCnRptFldMetaData.hbm.xml"/>        
+        <mapping resource="com/mckesson/smora/database/model/TApplCnRptWt.hbm.xml"/>                
+        <mapping resource="com/mckesson/smora/database/model/TApplCnRptFlv.hbm.xml"/>
+        <mapping resource="com/mckesson/smora/database/model/TApplTempMhsAcct.hbm.xml"/>
+		<mapping resource="com/mckesson/smora/database/model/VMckNonmckItem.hbm.xml"/>
+		<mapping resource="com/mckesson/smora/database/model/TCmsAcctOrigItem.hbm.xml"/>
+        <mapping resource="com/mckesson/smora/database/model/TCustLocalItemXref2.hbm.xml"/>  
+		<mapping resource="com/mckesson/smora/database/model/TAcctItemPrc.hbm.xml"/>
+		<mapping resource="com/mckesson/smora/database/model/TEqItemPrc.hbm.xml"/>
+		<!--Added For SO 950-->
+		<mapping resource="com/mckesson/smora/database/model/TApplSCustAcct.hbm.xml" />
+		<mapping resource="com/mckesson/smora/database/model/TVisnChainXref.hbm.xml" /> 
+		
+		<!--Added by Avik for ELA Custom Reports-->
+		<mapping resource="com/mckesson/smora/database/model/TAcctItemPrcTmp.hbm.xml"/>
+		<!--End Added by Avik for ELA Custom Reports-->
+		<!--Added by Avik for ELA Canned Reports-->
+		<mapping resource="com/mckesson/smora/database/model/TCnAcctItemPrcTmp.hbm.xml"/>
+		<mapping resource="com/mckesson/smora/database/model/TCmsEqItemPrc.hbm.xml"/>
+		
+		<mapping resource="com/mckesson/smora/database/model/TScheTime.hbm.xml"/>
+		<mapping resource="com/mckesson/smora/database/model/TScheZone.hbm.xml"/>
+		<mapping resource="com/mckesson/smora/database/model/TApplFldPrcDisclaimer.hbm.xml"/>
+		<!-- Added for SO-3806 SynerGx Rebranding -->
+		<mapping resource="com/mckesson/smora/database/model/TApplMultisourceLkup.hbm.xml"/>
+		<mapping resource="com/mckesson/smora/database/model/TNatCodingLkup.hbm.xml"/>
+		<!-- Added for QC-9758  -->
+		<mapping resource="com/mckesson/smora/database/model/TApplRptSubRptLkUp.hbm.xml"/>
+		
+		<!--End Added by Avik for ELA Canned Reports-->
+		<!-- Added for QC-10013  -->
+		<mapping resource="com/mckesson/smora/database/model/TPddRptLastAcctUsed.hbm.xml"/>
+   </session-factory>
+</hibernate-configuration>
